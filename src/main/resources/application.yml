@@ -1,0 +1,16 @@
+spring:
+  config:
+    import: classpath:/domains.yml
+  kafka:
+    consumer:
+      bootstrap-servers: ${KAFKA_CONSUMER_BOOTSTRAP_SERVERS}
+      group-id: ${KAFKA_CONSUMER_GROUP_ID}
+      auto-offset-reset: ${KAFKA_CONSUMER_AUTO_OFFSET_RESET}
+      key-deserializer: ${KAFKA_CONSUMER_KEY_DESERIALIZER}
+      value-deserializer: ${KAFKA_CONSUMER_VALUE_DESERIALIZER}
+    producer:
+      bootstrap-servers: ${KAFKA_PRODUCER_BOOTSTRAP_SERVERS}
+      key-serializer: ${KAFKA_PRODUCER_KEY_SERIALIZER}
+      value-serializer: ${KAFKA_PRODUCER_VALUE_SERIALIZER}
+server:
+  port: 8082

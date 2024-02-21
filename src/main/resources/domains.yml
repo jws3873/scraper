@@ -1,0 +1,35 @@
+my-config:
+  domains:
+#    - name: dcinside
+#      url: https://gall.dcinside.com/mgallery/board/lists/?id=tenbagger
+#      postTag: tr.ub-content.us-post:has(td.gall_subject:contains(일반))
+#      titleTag: a:nth-child(1)
+#      dateTag: td.gall_date
+#      contentTag: div.write_div
+
+    - name: blind
+      url: https://www.teamblind.com/kr/topics/%EC%A3%BC%EC%8B%9D%C2%B7%ED%88%AC%EC%9E%90
+      postTag: div.tit
+      titleTag: h3 > a
+      contentTag: "#contentArea"
+      dateTag:
+      viewCntTag: "#wrap > section > div > div > div.article-view-head > div.wrap-info > span.pv"
+      commentTag : p.cmt-txt
+
+    - name: nastock
+      url: https://nastock.com/free
+      postTag: tr:has(td.no)
+      titleTag: a
+      contentTag: .xe_content > p
+      dateTag: div.section_wrap.section_bottom_0 > ul > li:nth-child(4) > a > span
+      viewCntTag: "div.board_read.rd > div.section_wrap.section_bottom_0 > ul > li:nth-child(3) > a > span > b"
+      commentTag : div.xe_content
+
+    - name: etoland
+      url: https://www.etoland.co.kr/bbs/board.php?bo_table=stock
+      postTag: tr[align=center]:has(td:has(span.mw_basic_list_num))
+      titleTag: td.mw_basic_list_subject.singleLineText > a:nth-child(3)
+      contentTag: "#view_content"
+      dateTag: span.mw_basic_view_datetime
+      viewCntTag: "#mw_basic > table.view_table.no_ban_div > tbody > tr:nth-child(4) > td > span.mw_basic_view_hit"
+      commentTag : "table.mw_basic_comment_content > tbody > tr > td"
